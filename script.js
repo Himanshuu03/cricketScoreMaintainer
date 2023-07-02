@@ -5,6 +5,7 @@ nameButton.addEventListener('click',()=>{
     if(nameTeam.value != ""){
         document.querySelector('.teamNameCurrent').innerText = nameTeam;
         document.querySelector('.teamCurrentScore').innerText = 0;
+        document.querySelector('#tNameInput').value = "";
     } 
 })
 var teamRun = document.querySelectorAll('[data-team-run]')
@@ -15,7 +16,7 @@ var count = 0;
 var overCount =1;
 teamRun.forEach((e)=>{
     e.addEventListener('click',()=>{
-        displayAllBal.innerText = displayAllBal.innerText + e.innerText +"__";
+        displayAllBal.innerText = displayAllBal.innerText + e.innerText +"ㅤ";
         if(e.innerText == '1' || e.innerText == '2' || e.innerText == '3' || e.innerText == '4' || e.innerText == '6' || e.innerText =='5' || e.innerText == 'Bb' || e.innerText == 'Dotb'){
             count ++;
             if(count == 6){
@@ -37,65 +38,73 @@ teamRun.forEach((e)=>{
     })
 })
 
-// var invRun = document.querySelectorAll('[data-inv-run]');
-// var invRuns  =0;
+var invRun = document.querySelectorAll('[data-inv-run]');
+var invRuns  =0;
 
-// invRun.forEach((e)=>{
-//     e.addEventListener('click',()=>{
-//         if(e.innerText == '1' || e.innerText == '2' || e.innerText == '3' || e.innerText == '4' || e.innerText == '6' || e.innerText =='5'){
-//             invRuns += parseInt(e.innerText);
-//             document.querySelector('[data-inv]').innerText = invRuns;
-//         }
-//     })
-// })
+invRun.forEach((e)=>{
+    e.addEventListener('click',()=>{
+        if(e.innerText == '1' || e.innerText == '2' || e.innerText == '3' || e.innerText == '4' || e.innerText == '6' || e.innerText =='5'){
+            invRuns += parseInt(e.innerText);
+            document.querySelector('[data-inv]').innerText = invRuns;
+        }
+    })
+})
 
-// var playerButton = document.querySelector('[data-player-button]')
-// playerButton.addEventListener('click',()=>{
-//     var player = document.querySelector('#pNameInput').value;
-//     if(player.value != ""){
-//         document.querySelector('.invNameCurrent').innerText = player;
-//         document.querySelector('[data-inv]').innerText = 0;
-//         document.querySelector('#pNameInput').value ="";
-//     } 
-// })
+var playerButton = document.querySelector('[data-player-button]')
+playerButton.addEventListener('click',()=>{
+    var player = document.querySelector('#pNameInput').value;
+    if(player.value != ""){
+        document.querySelector('.invNameCurrent').innerText = player;
+        document.querySelector('[data-inv]').innerText = 0;
+        document.querySelector('#pNameInput').value ="";
+    } 
+})
 
-// var invRun2 = document.querySelectorAll('[data-inv-run2]');
-// var invRuns2  =0;
+var invRun2 = document.querySelectorAll('[data-inv-run2]');
+var invRuns2  =0;
 
-// invRun2.forEach((e)=>{
-//     e.addEventListener('click',()=>{
-//         if(e.innerText == '1' || e.innerText == '2' || e.innerText == '3' || e.innerText == '4' || e.innerText == '6' || e.innerText =='5'){
-//             invRuns2 += parseInt(e.innerText);
-//             document.querySelector('[data-inv2]').innerText = invRuns2;
-//         }
-//     })
-// })
+invRun2.forEach((e)=>{
+    e.addEventListener('click',()=>{
+        if(e.innerText == '1' || e.innerText == '2' || e.innerText == '3' || e.innerText == '4' || e.innerText == '6' || e.innerText =='5'){
+            invRuns2 += parseInt(e.innerText);
+            document.querySelector('[data-inv2]').innerText = invRuns2;
+        }
+    })
+})
 
-// var playerButton2 = document.querySelector('[data-player-button2]')
-// playerButton2.addEventListener('click',()=>{
-//     var player2 = document.querySelector('#pNameInput2').value;
-//     if(player2.value != ""){
-//         document.querySelector('.invNameCurrent2').innerText = player2;
-//         document.querySelector('[data-inv2]').innerText = 0;
-//     } 
-// })
+var playerButton2 = document.querySelector('[data-player-button2]')
+playerButton2.addEventListener('click',()=>{
+    var player2 = document.querySelector('#pNameInput2').value;
+    if(player2.value != ""){
+        document.querySelector('.invNameCurrent2').innerText = player2;
+        document.querySelector('[data-inv2]').innerText = 0;
+    } 
+})
 
-// var remov1 = document.querySelector('[data-remove-button]');
-// remov1.addEventListener('click',()=>{
-//     var para = document.createElement('p');
-//     para.innerText = "Player ->"+ document.querySelector('.invNameCurrent').innerText +" Score ->"+document.querySelector('[data-inv]').innerText;
-//     document.querySelector('[data-team-all]').appendChild(para);
-//     document.querySelector('.invNameCurrent').innerText = "";
-//     document.querySelector('[data-inv]').innerText = 0;
-//     document.querySelector('#pNameInput').value ="";
-// })
+var remov1 = document.querySelector('[data-remove-button]');
+remov1.addEventListener('click',()=>{
+    var para = document.createElement('p');
+    para.innerText = "Player ->"+ document.querySelector('.invNameCurrent').innerText +" Score ->"+document.querySelector('[data-inv]').innerText;
+    document.querySelector('[data-team-all]').appendChild(para);
+    document.querySelector('.invNameCurrent').innerText = "";
+    document.querySelector('[data-inv]').innerText = 0;
+    document.querySelector('#pNameInput').value ="";
+})
 
-// var remov2 = document.querySelector('[data-remove-button2]');
-// remov2.addEventListener('click',()=>{
-//     var para2= document.createElement('p');
-//     para2.innerText = "Player ->"+ document.querySelector('.invNameCurrent2').innerText +" Score ->"+document.querySelector('[data-inv2]').innerText;
-//     document.querySelector('[data-team-all]').appendChild(para2);
-//     document.querySelector('.invNameCurrent2').innerText = "";
-//     document.querySelector('[data-inv2]').innerText = 0;
-//     document.querySelector('#pNameInput2').value ="";
-// })
+var remov2 = document.querySelector('[data-remove-button2]');
+remov2.addEventListener('click',()=>{
+    var para2= document.createElement('p');
+    para2.innerText = "Player ->"+ document.querySelector('.invNameCurrent2').innerText +" Score ->"+document.querySelector('[data-inv2]').innerText;
+    document.querySelector('[data-team-all]').appendChild(para2);
+    document.querySelector('.invNameCurrent2').innerText = "";
+    document.querySelector('[data-inv2]').innerText = 0;
+    document.querySelector('#pNameInput2').value ="";
+})
+
+var remov3 = document.querySelector('[data-remove-button3]');
+remov3.addEventListener('click',()=>{
+    document.querySelector('.teamCurrentScore').innerText = 0;
+    document.querySelector('.displayAllBall').innerText = "";
+    document.querySelector('.teamNameCurrent').innerText = "";
+    document.querySelector('#tNameInput').value = "";
+})

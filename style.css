@@ -1,34 +1,150 @@
 
-*,*::after,*::before{
-    box-sizing: border-box;
-    margin: 0;
-    padding :0;
-    font-family:sans-serif;
-    font-size: 30px;
+
+   *,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(169, 66, 226);
+  background: linear-gradient(
+    90deg,
+    rgba(169, 66, 226, 1) 0%,
+    rgba(80, 45, 112, 1) 100%,
+    rgba(26, 87, 180, 1) 100%
+  );
+  color: white;
 }
-.wrapper{
-    width: 90%;
-    max-width: 1000px;
+
+.wrapper {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto; 
 }
-.choosePlayer{
-    display: flex;
-    justify-content: space-between;
+
+button {
+  background: rgb(205, 26, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(205, 26, 180, 1) 40%,
+    rgba(201, 61, 224, 1) 96%
+  );
+  letter-spacing: 1px;
+  color: yellow;
+  text-align: center;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 20px;
 }
-.buttonFormat{
-    background-color: #4CAF50; 
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
+
+.teamName {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 1%;
+  border-bottom: 0.35rem solid rgb(25, 2, 38);
+  background: linear-gradient(
+    90deg,
+    rgba(60, 4, 91, 1) 31%,
+    rgba(80, 45, 112, 1) 100%,
+    rgba(26, 87, 180, 1) 100%
+  );
+}
+
+.teamScore {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 1%;
+  border-bottom: 0.35rem solid rgb(25, 2, 38);
+  background: linear-gradient(
+    90deg,
+    rgba(60, 4, 91, 1) 31%,
+    rgba(80, 45, 112, 1) 100%,
+    rgba(26, 87, 180, 1) 100%
+  );
+}
+
+.teamNameCurrent {
+  text-align: center;
+}
+
+#hh {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 1%;
+  border-bottom: 0.35rem solid rgb(25, 2, 38);
+  background: linear-gradient(
+    90deg,
+    rgba(60, 4, 91, 1) 31%,
+    rgba(80, 45, 112, 1) 100%,
+    rgba(26, 87, 180, 1) 100%
+  );
+}
+.player, .player2{
+    border:1px solid black;
+    padding:1rem;
+    margin: .5rem;
+    border-radius: 1%;
+    border-bottom: 0.35rem solid rgb(25,2,38);
+    background: linear-gradient(90deg, rgba(60,4,91,1) 31%, rgba(80,45,112,1) 100%, rgba(26,87,180,1) 100%);
+  }
+
+  input{
     border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    line-height: 30px;
+    letter-spacing: 1px;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-} 
+  }
+  input::placeholder{
+    color: rgba(243, 255, 10, 0.75)
+  }
+/* Media Query for phones */
+@media only screen and (max-width: 600px) {
+    .teamName,
+    .teamScore {
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5rem;
+    }
+  
+    .teamScore button,
+    .player button {
+      margin-top: 0.5rem;
+    }
+  
+    .wrapper {
+      width: 100%;
+      padding: 0 1rem;
+    }
+  }
