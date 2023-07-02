@@ -38,14 +38,19 @@
             <button class="buttonFormat" data-choose-button>Add</button>
         </div>
         <div class="player" data-team-player>
-            <div class="playerName"></div>
+            <div class="playerName">
+                <label for="pNameInput">Enter player name:-></label>
+                <input class="inputFormat" type="text" placeholder="player name" id="pNameInput">
+                <button class="buttonFormat" data-player-button>Enter</button>
+            </div>
+            <div class="invNameCurrent"></div>
             <button class="buttonFormat" data-inv-run>1</button>
             <button class="buttonFormat" data-inv-run>2</button>
             <button class="buttonFormat" data-inv-run>3</button>
             <button class="buttonFormat" data-inv-run>4</button>
             <button class="buttonFormat" data-inv-run>5</button>
             <button class="buttonFormat" data-inv-run>6</button>
-            <div class="buttonText">0</div>
+            <div class="buttonText" data-inv>0</div>
         </div>
     </div>
     <script src="script.js"></script>

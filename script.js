@@ -2,7 +2,6 @@
 var nameButton = document.querySelector('[data-team-button]')
 nameButton.addEventListener('click',()=>{
     var nameTeam = document.querySelector('#tNameInput').value;
-    console.log("Hello")
     if(nameTeam.value != ""){
         document.querySelector('.teamNameCurrent').innerText = nameTeam;
         document.querySelector('.teamCurrentScore').innerText = 0;
@@ -38,3 +37,23 @@ teamRun.forEach((e)=>{
     })
 })
 
+var invRun = document.querySelectorAll('[data-inv-run]');
+var invRuns  =0;
+
+invRun.forEach((e)=>{
+    e.addEventListener('click',()=>{
+        if(e.innerText == '1' || e.innerText == '2' || e.innerText == '3' || e.innerText == '4' || e.innerText == '6' || e.innerText =='5'){
+            invRuns += parseInt(e.innerText);
+            document.querySelector('[data-inv]').innerText = invRuns;
+        }
+    })
+})
+
+var playerButton = document.querySelector('[data-player-button]')
+playerButton.addEventListener('click',()=>{
+    var player = document.querySelector('#pNameInput').value;
+    if(player.value != ""){
+        document.querySelector('.invNameCurrent').innerText = player;
+        document.querySelector('[data-inv]').innerText = 0;
+    } 
+})
