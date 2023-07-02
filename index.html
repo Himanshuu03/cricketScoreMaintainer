@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <div class="teamName" data-team-name>
+                <label for="tNameInput">Enter team name:-></label>
+                <input class="inputFormat" type="text" placeholder="team name" id="tNameInput">
+                <button class="buttonFormat" data-team-button>Enter</button>
+            </div>
+                <div class="teamScore">
+                    <div class="teamNameCurrent"></div>
+                    <button class="buttonFormat" data-team-run>1</button>
+                    <button class="buttonFormat" data-team-run>2</button>
+                    <button class="buttonFormat" data-team-run>3</button>
+                    <button class="buttonFormat" data-team-run>4</button>
+                    <button class="buttonFormat" data-team-run>5</button>
+                    <button class="buttonFormat" data-team-run>6</button>
+                    <button class="buttonFormat" data-team-run>Nb</button>
+                    <button class="buttonFormat" data-team-run>Wb</button>
+                    <button class="buttonFormat" data-team-run>Bb</button>
+                    <button class="buttonFormat" data-team-run>Db</button>
+                    <button class="buttonFormat" data-team-run>Dotb</button>     
+                    <div>
+                        Total Team Score -> <span class="teamCurrentScore"></span>
+                        <div class=""></div>
+                    </div>
+                </div>
+        </div>
+        <div class="choosePlayer" data-choose-player>
+            <span>Add Player</span>
+            <button class="buttonFormat" data-choose-button>Add</button>
+        </div>
+        <div class="player" data-team-player>
+            <div class="playerName"></div>
+            <button class="buttonFormat" data-inv-run>1</button>
+            <button class="buttonFormat" data-inv-run>2</button>
+            <button class="buttonFormat" data-inv-run>3</button>
+            <button class="buttonFormat" data-inv-run>4</button>
+            <button class="buttonFormat" data-inv-run>5</button>
+            <button class="buttonFormat" data-inv-run>6</button>
+            <div class="buttonText">0</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
